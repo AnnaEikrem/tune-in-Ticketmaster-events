@@ -1,0 +1,35 @@
+.events__container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.events__headline {
+	padding: 0.5rem;
+	font-size: var(--font-size-large);
+}
+
+.events__items {
+	padding: 1rem;
+}
+
+.event__item {
+	padding: 0.5rem;
+	background: red;
+}
+
+/* ENDRE DETTE, BILDET MÅ TA FULL PLASS UTEN Å DEFINERE WIDTH */
+.event__item--image {
+	width: 30rem;
+}
+
+.event__item--headline {
+	font-size: var(--font-size-medium);
+	font-family: var(--font-family-body);
+	/* letter-spacing: 7%; */
+}
+
+.event__item--text {
+	font-size: var(--font-size-body);
+	font-family: var(--font-family-body);
+}
