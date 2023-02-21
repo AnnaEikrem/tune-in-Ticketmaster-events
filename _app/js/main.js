@@ -1,5 +1,5 @@
-import toggleHeader from './modules/header.js';
+import toggleNavigation from './modules/toggleNavigation.js';
 
-toggleHeader();
+toggleNavigation();
 
 
