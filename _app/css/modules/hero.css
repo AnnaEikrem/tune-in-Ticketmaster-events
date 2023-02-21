@@ -1,0 +1,18 @@
+.hero__container {
+	background: green;
+}
+
+.main__hero {
+
+}
+
+.hero--images {
+	width: 100%;
+}
+
+
+
+/* The images */
+.hero__image--first {
+	margin: 0;
+}
