@@ -2,29 +2,72 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-
-	padding: 1rem;
-
-	background: var(--color-02);
 }
 
 .header__headline {
-	color: green;
+	color: var(--color-01);
 }
+
+
+
+
+
 
 /* Styling navigation/menu */
 .header__top--container {
-	width: 100%;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+
+	padding: 1rem;
+	background: var(--color-02);
+}
+
+.header__navigation--close {
+	display: none;
+}
+
+/* Riktig å sette høyden til navigasjonen med 'vh'? */
+.header__menu--container {
+	height: 100vh;
+	display: none;
+	background: var(--color-03);
+}
+
+.header__menu--item {
+	padding: 0.3rem;
+	border: 1px solid var(--color-04);
+}
+
+.header__menu--item--link {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-decoration: none;
+	color: var(--color-01);
+	font-family: var(--font-family-body);
+}
+
+.header__menu--item--arrow {
+	border-left: 1px solid var(--color-04);
+}
+
+
+/* Styling bottom navigation */
+.header__navigation--bottom {
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 
 
-/* Må ha position relative, så ikke innholdet dyttes ned når menyen kommer? */
-.header__menu--container {
-	padding: 1.5rem;
-	display: flex;
-	justify-content: right;
+.header__navigation--input {
+	width: 50%;
+}
+
+.header__navigation--heart--icon {
+	width: 2rem;
 }
