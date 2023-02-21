@@ -9,6 +9,7 @@ li {
 button {
 	padding: 0.5rem;
 	border: none;
+	background: inherit;
 }
 
 button:hover {
