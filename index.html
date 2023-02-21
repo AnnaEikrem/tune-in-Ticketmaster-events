@@ -14,20 +14,46 @@
 			<div class="header__top--container">
 				<h1 class="header__headline">Tune in Oslo</h1>
 
-				<button class="header__navigation--button">
-					<img class="header__burger--menu" src="./_app/assets/icons/burgerMenu.png" alt="Open navigation menu">
+				<div class="header__navigation--buttons">
+					<button class="header__navigation--open">
+						<img class="header__burger--menu" src="./_app/assets/icons/burgerMenu.png" alt="Open navigation menu">
+					</button>
 
-					<img class="header__close--menu" src="./_app/assets/icons/xMenu.png" alt="Close navigation menu">
-				</button>
+					<button class="header__navigation--close">
+						<img class="header__close--menu--icon" src="./_app/assets/icons/xMenu.png" alt="Close navigation menu">
+					</button>
+				</div>
 			</div>
 
-			<nav class="header__menu--container">
+			<menu class="header__menu--container">
 				<ul class="header__menu--list">
-					<li class="header__menu--item"><a href="./index.html">Hjem</a></li>
-					<li class="header__menu--item"><a href="./_app/arrangementer/index.html">Arrangementer</a></li>
-					<li class="header__menu--item"><a href="#">Kontakt oss</a></li>
+					<li class="header__menu--item">
+						<a class="header__menu--item--link" href="./index.html">Hjem
+							<img class="header__menu--item--arrow" src="./_app/assets/icons/Arrow right.png" alt="Arrow icon, pointing right">
+						</a>
+					</li>
+
+					<li class="header__menu--item">
+						<a class="header__menu--item--link" href="./_app/arrangementer/index.html">Arrangementer
+							<img class="header__menu--item--arrow" src="./_app/assets/icons/Arrow right.png" alt="Arrow icon, pointing right">
+						</a>
+					</li>
+
+					<li class="header__menu--item">
+						<a class="header__menu--item--link" href="#">Kontakt oss
+							<img class="header__menu--item--arrow" src="./_app/assets/icons/Arrow right.png" alt="Arrow icon, pointing right">
+						</a>
+					</li>
 				</ul>
-			</nav>
+
+				<div class="header__navigation--bottom">
+					<input class="header__navigation--input" type="text">
+					<img src="./_app/assets/icons/magnifyingGlassIcon.png">
+
+
+					<img class="header__navigation--heart--icon" src="./_app/assets/icons/HeartIcon.png" alt="Image of heart">
+				</div>
+			</menu>
 		</header>
 
 		<main>
@@ -37,11 +63,47 @@
 				</div>
 			</section>
 
+			<section class="events__container">
+				<h2 class="events__headline">Musikkarrangementer i Oslo</h2>
+
+				<div class="events__items">
+					<div class="event__item">
+						<img class="event__item--image" src="./_app/assets/images/Events-image.jpg" alt="En scene med artist i et konsert lokalet.">
+	
+						<h3 class="event__item--headline">Arrangementskalender</h3>
+	
+						<div class="event__item--text">Se alt musikkOslo har å by på</div>
+					</div>
+	
+					<div class="event__item">
+						<img class="event__item--image" src="./_app/assets/images/Events-image.jpg" alt="En scene med artist i et konsert lokalet.">
+	
+						<h3 class="event__item--headline">Cezinando</h3>
+	
+						<div class="event__item--text">Kjøp her</div>
+					</div>
+	
+					<div class="event__item">
+						<img class="event__item--image" src="./_app/assets/images/Events-image.jpg" alt="En scene med artist i et konsert lokalet.">
+	
+						<h3 class="event__item--headline">Karpe</h3>
+	
+						<div class="event__item--text">Kjøp her</div>
+					</div>
+
+					<div class="event__item">
+						<img class="event__item--image" src="./_app/assets/images/Events-image.jpg" alt="En scene med artist i et konsert lokalet.">
+	
+						<h3 class="event__item--headline">Astrid S</h3>
+	
+						<div class="event__item--text">Kjøp her</div>
+					</div>
+				</div>
+			</section>
 
 
 
 
 		</main>
-		
 	</body>
 </html>
