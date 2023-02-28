@@ -17,3 +17,8 @@ button:hover {
 	transition: 0.4s;
 	background: grey;
 }
+
+
+a {
+	text-decoration: none;
+}
