@@ -3,12 +3,57 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Tune in Oslo</title>
+		<title>Oslo: Arrangementer</title>
 
-		<link rel="stylesheet" href="">
+		<link rel="stylesheet" href="/_app/css/main.css">
+		<script type="module" src="/_app/js/main.js"></script>
 	</head>
 
 	<body>
+		<header class="header__container">
+			<div class="header__top--container">
+				<h1 class="header__headline">Tune in Oslo</h1>
+
+				<div class="header__navigation--buttons">
+					<button class="header__navigation--open">
+						<img class="header__burger--menu" src="/_app/assets/icons/burgerMenu.png" alt="Open navigation menu">
+					</button>
+
+					<button class="header__navigation--close">
+						<img class="header__close--menu--icon" src="/_app/assets/icons/xMenu.png" alt="Close navigation menu">
+					</button>
+				</div>
+			</div>
+
+			<menu class="header__menu--container">
+				<ul class="header__menu--list">
+					<li class="header__menu--item">
+						<a class="header__menu--item--link" href="./index.html">Hjem
+							<img class="header__menu--item--arrow" src="/_app/assets/icons/Arrow right.png" alt="Arrow icon, pointing right">
+						</a>
+					</li>
+
+					<li class="header__menu--item">
+						<a class="header__menu--item--link" href="./_app/arrangementer/index.html">Arrangementer
+							<img class="header__menu--item--arrow" src="/_app/assets/icons/Arrow right.png" alt="Arrow icon, pointing right">
+						</a>
+					</li>
+
+					<li class="header__menu--item">
+						<a class="header__menu--item--link" href="#">Kontakt oss
+							<img class="header__menu--item--arrow" src="/_app/assets/icons/Arrow right.png" alt="Arrow icon, pointing right">
+						</a>
+					</li>
+				</ul>
+
+				<div class="header__navigation--bottom">
+					<input class="header__navigation--input" type="text">
+					<img src="/_app/assets/icons/magnifyingGlassIcon.png">
+				</div>
+
+				<img class="header__navigation--heart--icon" src="/_app/assets/icons/HeartIcon.png" alt="Image of heart">
+			</menu>
+		</header>
 		
 	</body>
 </html>
