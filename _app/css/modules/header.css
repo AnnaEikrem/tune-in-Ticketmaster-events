@@ -8,11 +8,6 @@
 	color: var(--color-01);
 }
 
-
-
-
-
-
 /* Styling navigation/menu */
 .header__top--container {
 	display: flex;
@@ -57,15 +52,14 @@
 .header__navigation--bottom {
 	padding: 2rem;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	justify-content: center;
 	align-items: center;
 }
 
-
-
 .header__navigation--input {
 	width: 50%;
+	/* border: none; */
 }
 
 .header__navigation--heart--icon {
