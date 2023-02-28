@@ -4,5 +4,15 @@ export default async function fetchEvents() {
 	const response = await fetch(endpointEventsOslo);
 	const results = await response.json();
 
+	const name = await results._embedded.events;
+	// results.forEach(event => {
+	// })
+
+
+
+
 	console.log(results);
+	console.log(name);
+
+
 }
