@@ -5,3 +5,7 @@
 @import './modules/header.css';
 @import './modules/hero.css';
 @import './modules/main-events.css';
+
+
+@import './modules/arrangementer.css';
+@import './modules/arrangementer-items.css';
