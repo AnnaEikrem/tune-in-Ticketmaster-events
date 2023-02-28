@@ -1,0 +1,48 @@
+.events__list--cards {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	font-family: var(--font-family-body);
+	margin: 1rem 1.5rem;
+	background: grey;
+}
+
+/* Styling one event-card */
+.event__item--card {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	margin-bottom: 0.5rem;
+	background: rgb(142, 66, 80);
+}
+
+.event__item--picture {
+	width: 100%;
+}
+
+.event__item--information {
+	display: flex;
+	width: 100%;
+	border: 1px solid black;
+}
+
+.event__information--left {
+	width: 20%;
+	border-right: 1px solid black;
+	font-size: var(--font-size-small);
+}
+
+.event__information--center {
+	width: 60%;
+	border-right: 1px solid black;
+}
+
+.event__information--right {
+	width: 20%;
+}
+
+
+.event__center--title {
+	font-size: var(--font-size-medium);
+}
+
