@@ -5,10 +5,6 @@ export default async function fetchEvents() {
 	const results = await response.json();
 
 	const name = await results._embedded.events;
-	// results.forEach(event => {
-	// })
-
-
 
 
 	console.log(results);
