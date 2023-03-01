@@ -14,9 +14,10 @@
 	flex-direction: row;
 	justify-content: space-between;
 
-	padding: 1rem;
+	padding: 1.5rem;
 	background: var(--color-02);
 }
+
 
 .header__navigation--close {
 	display: none;
