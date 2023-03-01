@@ -1,18 +1,14 @@
-.hero__container {
-	background: green;
+.hero__section--container {
+	margin-top: 1rem;
 }
 
-.main__hero {
-
-}
-
-.hero--images {
+.hero__section--image {
 	width: 100%;
 }
 
 
-
 /* The images */
 .hero__image--first {
+	width: 100%;
 	margin: 0;
 }
