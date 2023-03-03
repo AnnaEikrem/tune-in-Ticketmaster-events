@@ -21,7 +21,5 @@ export default async function fetchEvents() {
 
 	// console.log(allData);
 	// console.log(eventResults);
-	// console.log(eventResults._embedded.events)
-	// console.log(eventResults);
-	
+
 }

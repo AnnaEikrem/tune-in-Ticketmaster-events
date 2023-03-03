@@ -1,15 +1,17 @@
 export default function renderEventsList(events) {
 	const eventsContainer = document.querySelector('.events__list--cards');
 
-	events.forEach(event => {
-		renderHTML(event);
-	});
+	if (eventsContainer != null) {
+		events.forEach(event => {
+			renderHTML(event);
+		});
+	}
 
 	function renderHTML(event) {
 		const eventImage = event.imageUrl;
 		const eventName = event.name;
 		const eventLocation = event.location;
-		const eventCity = event.city;
+		// const eventCity = event.city;
 		const eventDate = event.date;
 		const eventTime = event.time;
 		const eventBuyTicket = event.buyLink;
@@ -58,6 +60,7 @@ export default function renderEventsList(events) {
 		eventLocationPlace.classList.add('event__location--place');
 		eventInformationRight.classList.add('event__information--right');
 		buyButton.classList.add('event__right--button');
+		buyTicketmasterLink.classList.add('buy__button');
 		
 		
 		eventCard.appendChild(eventImageElement);
@@ -67,7 +70,6 @@ export default function renderEventsList(events) {
 		eventInformationLeft.appendChild(eventInformationDate);
 		eventInformationTime.appendChild(eventInformationIcon);
 		eventInformationLeft.appendChild(eventInformationTime);
-		
 		eventInformation.appendChild(eventInformationCenter);
 		eventInformationCenter.appendChild(eventCenterTitle);
 		eventInformationCenter.appendChild(eventCenterLocation);
