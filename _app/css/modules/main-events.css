@@ -20,7 +20,7 @@
 
 /* ENDRE DETTE, BILDET MÅ TA FULL PLASS UTEN Å DEFINERE WIDTH */
 .event__item--image {
-	width: 30rem;
+	width: 100%;
 }
 
 .event__item--headline {
