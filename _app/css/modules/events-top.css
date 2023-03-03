@@ -11,7 +11,7 @@
 .events__select--headline {
 	display: flex;
 	justify-content: left;
-	padding: 0.5rem;
+	margin: var(--margin-medium);
 	font-size: var(--font-size-large);
 }
 

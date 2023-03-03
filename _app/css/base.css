@@ -1,5 +1,6 @@
 body {
 	font-size: 125%;
+	color: var(--color-01);
 }
 
 li {

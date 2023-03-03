@@ -5,20 +5,18 @@
 }
 
 .events__headline {
-	padding: 0.5rem;
 	font-size: var(--font-size-large);
+	padding-bottom: 1.5rem;
 }
 
 .events__items {
-	padding: 1rem;
+	width: 90%;
 }
 
 .event__item {
-	padding: 0.5rem;
-	background: red;
+	width: 100%;
 }
 
-/* ENDRE DETTE, BILDET MÅ TA FULL PLASS UTEN Å DEFINERE WIDTH */
 .event__item--image {
 	width: 100%;
 }
