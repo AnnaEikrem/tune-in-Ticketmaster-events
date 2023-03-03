@@ -15,6 +15,7 @@ export default function renderEventsList(events) {
 		const eventBuyTicket = event.buyLink;
 		const eventTimeIcon = ("../assets/icons/Clock-icon.png");
 		const eventLocationPath = ("../assets/icons/Location-icon.png")
+		const buyLink = eventBuyTicket;
 	
 		const eventCard = document.createElement('div');
 		const eventImageElement = document.createElement('img');
@@ -28,22 +29,25 @@ export default function renderEventsList(events) {
 		const eventCenterLocation = document.createElement('div');
 		const eventLocationIcon = document.createElement('img');
 		const eventLocationPlace = document.createElement('div');
-		eventLocationPlace.classList.add('event__location--place');
-		eventLocationPlace.innerText = eventLocation;
-		eventCenterLocation.appendChild(eventLocationPlace);
-	
-	
+		const eventInformationRight = document.createElement('div');
+		const buyButton = document.createElement('button');
+		const buyTicketmasterLink = document.createElement('a');
 		
+	
 		eventImageElement.setAttribute('src', eventImage);
 		eventInformationDate.innerText = eventDate;
 		eventInformationIcon.setAttribute('src', eventTimeIcon);
 		eventInformationTime.innerText = eventTime;
 		eventCenterTitle.innerText = eventName;
 		eventLocationIcon.setAttribute('src', eventLocationPath);
+		eventLocationPlace.innerText = eventLocation;
+		buyTicketmasterLink.innerText = 'Kjøp';
+		buyTicketmasterLink.setAttribute('href', buyLink)
 		
 		eventCard.classList.add('event__item--card');
 		eventImageElement.classList.add('event__item--picture');
 		eventInformation.classList.add('event__item--information');
+		eventInformationLeft.classList.add('event__information--left');
 		eventInformationDate.classList.add('event__left--date');
 		eventInformationIcon.classList.add('event__time--icon');
 		eventInformationTime.classList.add('event__left--time');
@@ -51,19 +55,27 @@ export default function renderEventsList(events) {
 		eventCenterTitle.classList.add('event__center--title');
 		eventCenterLocation.classList.add('event__center--location');
 		eventLocationIcon.classList.add('event__location--icon');
+		eventLocationPlace.classList.add('event__location--place');
+		eventInformationRight.classList.add('event__information--right');
+		buyButton.classList.add('event__right--button');
+		
 		
 		eventCard.appendChild(eventImageElement);
 		eventsContainer.appendChild(eventCard);
-		eventsContainer.appendChild(eventInformation);
+		eventCard.appendChild(eventInformation);
 		eventInformation.appendChild(eventInformationLeft);
 		eventInformationLeft.appendChild(eventInformationDate);
 		eventInformationTime.appendChild(eventInformationIcon);
 		eventInformationLeft.appendChild(eventInformationTime);
 		
 		eventInformation.appendChild(eventInformationCenter);
-		eventInformation.appendChild(eventCenterTitle);
-		eventInformation.appendChild(eventCenterLocation);
+		eventInformationCenter.appendChild(eventCenterTitle);
+		eventInformationCenter.appendChild(eventCenterLocation);
 		eventCenterLocation.appendChild(eventLocationIcon);
+		eventCenterLocation.appendChild(eventLocationPlace);
+		eventInformation.appendChild(eventInformationRight);
+		eventInformationRight.appendChild(buyButton);
+		buyButton.appendChild(buyTicketmasterLink);
 
 	}
 }
