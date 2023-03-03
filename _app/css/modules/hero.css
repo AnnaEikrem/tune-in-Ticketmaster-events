@@ -2,13 +2,36 @@
 	margin: 2rem 0;
 }
 
-.hero__section--image {
+.hero__mobile--image {
 	width: 100%;
 }
 
 
-/* The images */
-.hero__image--first {
+/* Image cards */
+.hero__section--cards {
 	width: 100%;
-	margin: 0;
+	background-color: grey;
+}
+
+.hero__image--card {
+	width: 100%;
+}
+
+.hero__image--visual {
+	width: 100%;
+	opacity: 50%;
+}
+
+.hero__image--text {
+	display: flex;
+	justify-content: space-evenly;
+	font-family: var(--font-family-body);
+}
+
+.hero__image--event {
+	margin: 0.8rem;
+}
+
+.hero__image--date {
+	margin: 0.8rem;
 }
