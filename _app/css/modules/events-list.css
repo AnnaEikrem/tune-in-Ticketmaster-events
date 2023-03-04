@@ -6,12 +6,13 @@
 	margin: 1rem 1.5rem;
 }
 
+
 /* Styling one event-card */
 .event__item--card {
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	margin-bottom: 0.5rem;
+	margin-bottom: 2rem;
 }
 
 .event__item--picture {
@@ -35,16 +36,13 @@
 	border-right: 1px solid black;
 }
 
-/* .event__left--date {
-	background: green;
-} */
 
 .event__left--time {
 	display: flex;
 }
 
 .event__time--icon {
-	margin-right: 0.2rem;
+	margin-right: 0.4rem;
 }
 
 .event__information--center {
@@ -61,6 +59,10 @@
 	font-size: var(--font-size-medium);
 }
 
+.event__location--icon {
+	margin-right: 0.4rem;
+}
+
 .event__center--location {
 	display: flex;
 	font-size: var(--font-size-small);
@@ -71,7 +73,6 @@
 	justify-content: center;
 	align-items: center;
 	width: 20%;
-	/* padding: 0.5rem; */
 }
 
 .event__right--button {
