@@ -7,7 +7,6 @@ export default function renderEventsList(events) {
 		});
 	}
 
-
 	function renderHTML(event) {
 		const eventImage = event.imageUrl;
 		const eventName = event.name;
