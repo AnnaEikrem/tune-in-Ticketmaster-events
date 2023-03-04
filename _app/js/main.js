@@ -5,13 +5,12 @@ import renderEventsList from './modules/renderEventsList.js';
 import heroCarousel from './modules/heroCarousel.js';
 
 // Fetch data from Ticketmaster;
-const fetchedData = await fetchEvents()
-;
+const fetchedData = await fetchEvents();
 
 
 toggleNavigation();
 renderEventsList(fetchedData);
-// formatDate();
+// formatDate(fetchedData);
 heroCarousel(fetchedData);
 
 
