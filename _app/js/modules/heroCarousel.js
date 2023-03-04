@@ -1,10 +1,15 @@
 export default function heroCarousel(events) {
 	const heroContainer = document.querySelector('.hero__section--cards');
 
+	if (heroContainer != null) {
 
-	events.forEach(image => {
-		renderCarousel(image);
-	})
+		events.forEach(image => {
+			renderCarousel(image);
+		})
+	}
+
+
+
 
 	function renderCarousel(image) {
 		const eventImage = image.imageUrl;
