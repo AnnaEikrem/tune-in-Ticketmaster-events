@@ -1,17 +1,42 @@
-export default function heroCarousel(events) {
+export default async function heroCarousel(events) {
 	const heroContainer = document.querySelector('.hero__section--cards');
+	let heroImages = [];
+	
+	const slicedEventArray = events.slice(0, 5);
+	let currentIndex = 0;
 
 	if (heroContainer != null) {
-
-		events.forEach(image => {
-			renderCarousel(image);
+		slicedEventArray.forEach(image => {
+			renderCarouselHTML(image);
 		})
 	}
 
+	if(heroContainer) {
+		setInterval(autoplayCarousel, 4000);
+	}
 
+	function autoplayCarousel(image) {
+		increaseSlideIndex(image);
+		renderCarousel(image);
+	}
 
+	function increaseSlideIndex() {
+		if (currentIndex < heroImages.length -1) {
+			currentIndex += 1;
+		} else {
+			currentIndex = 0;
+		}
+	}
 
-	function renderCarousel(image) {
+	function renderCarousel() {
+		for (const card of heroImages) {
+			card.classList.remove('hero__image--visible');
+		}
+
+		heroImages[currentIndex].classList.add('hero__image--visible');
+	}
+
+	function renderCarouselHTML(image) {
 		const eventImage = image.imageUrl;
 		const eventName = image.name;
 		const eventDate = image.date;
@@ -27,6 +52,8 @@ export default function heroCarousel(events) {
 		imageCardBottom.classList.add('hero__image--text');
 		imageCardTitle.classList.add('hero__image--title');
 		imageCardDate.classList.add('hero__image--date');
+
+		heroImages = document.querySelectorAll('.hero__image--card');
 		
 		heroContainer.appendChild(imageCard);
 		imageCard.appendChild(heroImage);
