@@ -6,7 +6,6 @@
 	width: 100%;
 }
 
-
 /* Image cards */
 .hero__section--cards {
 	width: 100%;
@@ -14,7 +13,12 @@
 }
 
 .hero__image--card {
+	display: none;
 	width: 100%;
+}
+
+.hero__image--visible {
+	display: block;
 }
 
 .hero__image--visual {
