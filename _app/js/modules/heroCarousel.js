@@ -12,7 +12,7 @@ export default async function heroCarousel(events) {
 	}
 
 	if(heroContainer) {
-		setInterval(autoplayCarousel, 4000);
+		setInterval(autoplayCarousel, 3000);
 	}
 
 	function autoplayCarousel(image) {
@@ -64,6 +64,9 @@ export default async function heroCarousel(events) {
 		heroImage.setAttribute('src', eventImage.find(heroImage => heroImage.width > 600)?.url);
 		imageCardTitle.innerText = eventName;
 		imageCardDate.innerText = eventDate;
+
+
+		console.log(eventImage);
 
 	}
 }
