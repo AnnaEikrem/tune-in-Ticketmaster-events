@@ -1,4 +1,9 @@
+// import { tm_token } from "../env.js";
+
 export default async function fetchEvents() {
+	// const i = tm_token; // Får blokkert pga. CORS policy error
+	// const eventSize = '200'
+
 	const endpointEventsOslo = 'https://app.ticketmaster.com/discovery/v2/events?apikey=X8qgmCZMjDFoChlGd2mZXPbwpVSTvH9A&locale=*&size=200&city=Oslo&countryCode=NO&segmentName=Music';
 
 	const response = await fetch(endpointEventsOslo);
@@ -15,14 +20,8 @@ export default async function fetchEvents() {
 			imageUrl: data.images,
 			buyLink: data.url,
 			timeStamp: data.dates.start.dateTime
-
 		}
 	});
 
-
 	return allData;
-
-	// console.log(allData);
-	// console.log(eventResults);
-
 }
