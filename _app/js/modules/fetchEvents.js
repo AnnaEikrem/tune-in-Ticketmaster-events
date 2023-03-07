@@ -14,6 +14,7 @@ export default async function fetchEvents() {
 			location: data._embedded.venues[0].name,
 			imageUrl: data.images[0].url,
 			buyLink: data.url,
+			timeStamp: data.dates.start.dateTime
 		}
 	});
 
