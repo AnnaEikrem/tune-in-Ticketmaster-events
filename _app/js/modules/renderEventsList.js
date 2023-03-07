@@ -1,30 +1,81 @@
-// import formatDate from "./formatDate.js";
-
 export default async function renderEventsList(events) {
+	let eventDay = '';
+	let eventDate = '';
+	let eventMonth = '';
+	let eventTime = '';
+
 	const eventsContainer = document.querySelector('.events__list--cards');
 
 	if (eventsContainer != null) {
 		events.forEach(event => {
+			formatNewDate(event);
 			renderHTML(event);
+
 		});
 	}
+
+	function formatNewDate(event) {
+		const getDate = event.date.split('-');
+		const theEventTime = event.time.split(':');
+		const timeStamp = event.timeStamp;
+		const formattedDate = new Date(timeStamp);
+
+		const days = [
+			'Søndag',
+			'Mandag',
+			'Tirsdag',
+			'Onsdag',
+			'Torsdag',
+			'Fredag',
+			'Lørdag',
+		];
+
+		const months = [
+			'Jan',
+			'Feb',
+			'Mar',
+			'Apr',
+			'Mai',
+			'Jun',
+			'Jul',
+			'Aug',
+			'Sep',
+			'Okt',
+			'Nov',
+			'Des',
+		];
+
+		const eventString = `${theEventTime[0]}.${theEventTime[1]}`
+		const daysString = days[formattedDate.getDay()];
+		const currentMonth = months[formattedDate.getMonth()];
+
+		const theEventDate = getDate[2];
+		const theEventDay = daysString;
+		const theEventMonth = currentMonth;
+
+		eventTime = `${eventString}`;
+		eventDate = `${theEventDate}`; 
+		eventMonth = `${theEventMonth}`;
+		eventDay = `${theEventDay}`;
+	}
+
 
 	function renderHTML(event) {
 		const eventImage = event.imageUrl;
 		const eventName = event.name;
 		const eventLocation = event.location;
-		const eventDate = event.date;
-		const eventTime = event.time;
 		const eventBuyTicket = event.buyLink;
 		const eventTimeIcon = ("../assets/icons/Clock-icon.png");
-		const eventLocationPath = ("../assets/icons/Location-icon.png")
+		const eventLocationPath = ("../assets/icons/Location-icon.png");
+
+		// Fix url/problem with ticketmaster user??
 		const buyLink = eventBuyTicket;
 	
-
 		const eventCard = document.createElement('div');
 		const eventImageElement = document.createElement('img');
 		const eventInformation = document.createElement('div');
 		const eventInformationLeft = document.createElement('div');
+		const eventInformationDay = document.createElement('div');
 		const eventInformationDate = document.createElement('div');
 		const eventInformationTime = document.createElement('div');
 		const eventInformationIcon = document.createElement('img');
@@ -38,10 +89,9 @@ export default async function renderEventsList(events) {
 		const buyButton = document.createElement('button');
 		const buyTicketmasterLink = document.createElement('a');
 
-		
-	
 		eventImageElement.setAttribute('src', eventImage.find(image => image.width > 600)?.url);
-		eventInformationDate.innerText = eventDate;
+		eventInformationDay.innerText = `${eventDay}`;
+		eventInformationDate.innerText = `${eventDate} ${eventMonth}`;
 		eventTimeNumber.innerText = eventTime;
 		eventInformationIcon.setAttribute('src', eventTimeIcon);
 		eventCenterTitle.innerText = eventName;
@@ -54,6 +104,7 @@ export default async function renderEventsList(events) {
 		eventImageElement.classList.add('event__item--picture');
 		eventInformation.classList.add('event__item--information');
 		eventInformationLeft.classList.add('event__information--left');
+		eventInformationDay.classList.add('event__left--day');
 		eventInformationDate.classList.add('event__left--date');
 		eventInformationTime.classList.add('event__left--time');
 		eventInformationIcon.classList.add('event__time--icon');
@@ -67,11 +118,11 @@ export default async function renderEventsList(events) {
 		buyButton.classList.add('event__right--button');
 		buyTicketmasterLink.classList.add('buy__button');
 		
-		
 		eventCard.appendChild(eventImageElement);
 		eventsContainer.appendChild(eventCard);
 		eventCard.appendChild(eventInformation);
 		eventInformation.appendChild(eventInformationLeft);
+		eventInformationLeft.appendChild(eventInformationDay);
 		eventInformationLeft.appendChild(eventInformationDate);
 		eventInformationLeft.appendChild(eventInformationTime);
 		eventInformationTime.appendChild(eventInformationIcon);
