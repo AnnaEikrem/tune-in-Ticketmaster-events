@@ -61,8 +61,9 @@ export default async function heroCarousel(events) {
 		imageCardBottom.appendChild(imageCardTitle);
 		imageCardBottom.append(imageCardDate);
 		
-		heroImage.setAttribute('src', eventImage);
+		heroImage.setAttribute('src', eventImage.find(heroImage => heroImage.width > 600)?.url);
 		imageCardTitle.innerText = eventName;
 		imageCardDate.innerText = eventDate;
+
 	}
 }

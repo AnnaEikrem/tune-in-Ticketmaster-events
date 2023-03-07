@@ -1,4 +1,6 @@
-export default function renderEventsList(events) {
+// import formatDate from "./formatDate.js";
+
+export default async function renderEventsList(events) {
 	const eventsContainer = document.querySelector('.events__list--cards');
 
 	if (eventsContainer != null) {
@@ -35,9 +37,10 @@ export default function renderEventsList(events) {
 		const eventInformationRight = document.createElement('div');
 		const buyButton = document.createElement('button');
 		const buyTicketmasterLink = document.createElement('a');
+
 		
 	
-		eventImageElement.setAttribute('src', eventImage);
+		eventImageElement.setAttribute('src', eventImage.find(image => image.width > 600)?.url);
 		eventInformationDate.innerText = eventDate;
 		eventTimeNumber.innerText = eventTime;
 		eventInformationIcon.setAttribute('src', eventTimeIcon);
@@ -81,6 +84,5 @@ export default function renderEventsList(events) {
 		eventInformation.appendChild(eventInformationRight);
 		eventInformationRight.appendChild(buyButton);
 		buyButton.appendChild(buyTicketmasterLink);
-
 	}
 }

@@ -12,11 +12,13 @@ export default async function fetchEvents() {
 			time: data.dates.start.localTime,
 			city: data._embedded.venues[0].city,
 			location: data._embedded.venues[0].name,
-			imageUrl: data.images[0].url,
+			imageUrl: data.images,
 			buyLink: data.url,
 			timeStamp: data.dates.start.dateTime
+
 		}
 	});
+
 
 	return allData;
 
