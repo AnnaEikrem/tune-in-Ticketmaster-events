@@ -66,7 +66,7 @@ export default async function heroCarousel(events) {
 		imageCardDate.innerText = eventDate;
 
 
-		console.log(eventImage);
+		// console.log(eventImage);
 
 	}
 }
