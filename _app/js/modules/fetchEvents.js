@@ -1,10 +1,10 @@
-// import { tm_token } from "../env.js";
+import { tm_token } from "../env.js";
 
 export default async function fetchEvents() {
-	// const i = tm_token; // Får blokkert pga. CORS policy error
-	// const eventSize = '200'
+	const i = tm_token;
+	const eventSize = 200;
 
-	const endpointEventsOslo = 'https://app.ticketmaster.com/discovery/v2/events?apikey=X8qgmCZMjDFoChlGd2mZXPbwpVSTvH9A&locale=*&size=200&city=Oslo&countryCode=NO&segmentName=Music';
+	const endpointEventsOslo = `https://app.ticketmaster.com/discovery/v2/events?apikey=${i}&locale=*&size=${eventSize}&city=Oslo&countryCode=NO&segmentName=Music`;
 
 	const response = await fetch(endpointEventsOslo);
 	const eventResults = await response.json();
