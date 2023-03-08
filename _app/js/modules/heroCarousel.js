@@ -8,10 +8,12 @@ export default async function heroCarousel(events) {
 	if (heroContainer != null) {
 		slicedEventArray.forEach(image => {
 			renderCarouselHTML(image);
+			// formatNewDate(image);
 		})
 	}
 
 	if(heroContainer) {
+		// loadFirstImage();
 		setInterval(autoplayCarousel, 3000);
 	}
 
