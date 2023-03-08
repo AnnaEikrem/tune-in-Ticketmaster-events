@@ -22,20 +22,26 @@
 }
 
 .hero__image--visual {
+	position: relative;
 	width: 100%;
-	opacity: 50%;
+	opacity: 70%;
 }
 
 .hero__image--text {
 	display: flex;
+	align-items: center;
 	justify-content: space-evenly;
+	padding: 1rem;
+	
 	font-family: var(--font-family-body);
+	/* position: absolute; */
+	/* top: 5rem; */
 }
 
-.hero__image--event {
-	margin: 0.8rem;
-}
 
-.hero__image--date {
-	margin: 0.8rem;
+
+@media screen and (min-width: 768px) {
+	.hero__section--container {
+		padding: 3rem 6rem;
+	}
 }
