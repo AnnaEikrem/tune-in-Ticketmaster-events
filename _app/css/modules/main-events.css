@@ -6,7 +6,6 @@
 
 .events__headline {
 	font-size: var(--font-size-large);
-	padding-bottom: 1.5rem;
 }
 
 .events__items {
@@ -15,6 +14,7 @@
 
 .event__item {
 	width: 100%;
+	padding: 3rem 6rem;
 }
 
 .event__item--image {
@@ -24,7 +24,6 @@
 .event__item--headline {
 	font-size: var(--font-size-medium);
 	font-family: var(--font-family-body);
-	/* letter-spacing: 7%; */
 }
 
 .event__item--text {
@@ -38,4 +37,7 @@
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 	}
+
+
+
 }
