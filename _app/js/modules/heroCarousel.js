@@ -1,25 +1,60 @@
+
 export default async function heroCarousel(events) {
 	const heroContainer = document.querySelector('.hero__section--cards');
+	const slicedEventArray = events.slice(1, 5);
+	const firstImage = events.slice(0, 1);
 	let heroImages = [];
-	
-	const slicedEventArray = events.slice(0, 5);
 	let currentIndex = 0;
 
-	if (heroContainer != null) {
+	// console.log(slicedEventArray[6])//Vil ikke vise den første og siste indexen i arrayen. 
+	if(heroContainer) {
+		loadFirstImage(firstImage);
+		setInterval(removeFirstImage, 3000);
+	}
+
+	if (heroContainer) {
 		slicedEventArray.forEach(image => {
+			setInterval(autoplayCarousel, 3000);
 			renderCarouselHTML(image);
 			// formatNewDate(image);
 		})
 	}
 
-	if(heroContainer) {
-		// loadFirstImage();
-		setInterval(autoplayCarousel, 3000);
+	function loadFirstImage(firstImage) {
+		const firstImageText = firstImage[0].name;
+		const firstImageDate = firstImage[0].day.localDate;
+		const firstimageUrl = firstImage[0].imageUrl;
+
+		const firstImageCardContainer = document.createElement('div');
+		const firstImagePhotoElement = document.createElement('img');
+		const firstImageBottom = document.createElement('div');	
+		const firstImageTitle = document.createElement('div');
+		const firstImageDateNumber = document.createElement('div');
+
+		firstImageCardContainer.classList.add('.hero__image--visible');
+		firstImagePhotoElement.classList.add('hero__image--visual');
+		firstImageBottom.classList.add('hero__image--text');
+		firstImageTitle.classList.add('hero__image--text');
+		firstImageDateNumber.classList.add('hero__image--date');
+
+		heroContainer.appendChild(firstImageCardContainer);
+		firstImageCardContainer.appendChild(firstImagePhotoElement);
+		firstImageCardContainer.appendChild(firstImageBottom);
+		firstImageBottom.appendChild(firstImageTitle);
+		firstImageBottom.appendChild(firstImageDateNumber);
+
+		firstImagePhotoElement.setAttribute('src',firstimageUrl.find(heroImage => heroImage.width > 600)?.url);
+		firstImageTitle.innerText = firstImageText;
+		firstImageDateNumber.innerText = firstImageDate;
+	}
+
+	function removeFirstImage() {
+		firstImageCardContainer.innerText = '';
 	}
 
 	function autoplayCarousel(image) {
-		increaseSlideIndex(image);
 		renderCarousel(image);
+		increaseSlideIndex(image);
 	}
 
 	function increaseSlideIndex() {
@@ -36,6 +71,7 @@ export default async function heroCarousel(events) {
 		}
 
 		heroImages[currentIndex].classList.add('hero__image--visible');
+		// console.log(heroImages);
 	}
 
 	function renderCarouselHTML(image) {
@@ -66,9 +102,5 @@ export default async function heroCarousel(events) {
 		heroImage.setAttribute('src', eventImage.find(heroImage => heroImage.width > 600)?.url);
 		imageCardTitle.innerText = eventName;
 		imageCardDate.innerText = eventDate;
-
-
-		// console.log(eventImage);
-
 	}
 }
