@@ -5,6 +5,7 @@
 }
 
 .events__headline {
+	font-family: var(--font-family-body);
 	font-size: var(--font-size-large);
 }
 
@@ -14,7 +15,7 @@
 
 .event__item {
 	width: 100%;
-	padding: 3rem 6rem;
+	padding: 2rem 6rem;
 }
 
 .event__item--image {
