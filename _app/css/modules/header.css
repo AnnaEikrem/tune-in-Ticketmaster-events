@@ -47,18 +47,39 @@
 
 /* Styling bottom navigation */
 .header__navigation--bottom {
-	padding: 2rem;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
+	padding: 2rem;
 }
 
 .header__navigation--input {
-	width: 50%;
-	padding: 0.5rem;
+	width: 90%;
+	padding: 0.7rem;
+	border: 1px solid black;
+	border-radius: 100px;
+	outline: none;
+}
+
+.header__navigation--submit {
+	background: transparent;
+	border: none;
+	outline: none;
+	margin-left: -33px;
+}
+
+.header__navigation--submit--icon {
+	width: 1rem;
+	height: 1rem;
+	object-fit: cover;
+}
+
+.header__navigation--heart {
+	display: flex;
+	justify-content: center;
 }
 
 .header__navigation--heart--icon {
-	width: 2rem;
+	width: 5rem;
 }
