@@ -10,7 +10,6 @@ export default async function renderEventsList(events) {
 		events.forEach(event => {
 			formatNewDate(event);
 			renderHTML(event);
-
 		});
 	}
 
@@ -57,6 +56,8 @@ export default async function renderEventsList(events) {
 		eventDate = `${theEventDate}`; 
 		eventMonth = `${theEventMonth}`;
 		eventDay = `${theEventDay}`;
+
+		// const dateSentence = `${theEventDate}. ${theEventMonth}`;
 	}
 
 
@@ -68,7 +69,6 @@ export default async function renderEventsList(events) {
 		const eventTimeIcon = ("../assets/icons/Clock-icon.png");
 		const eventLocationPath = ("../assets/icons/Location-icon.png");
 
-		// Fix url/problem with ticketmaster user??
 		const buyLink = eventBuyTicket;
 	
 		const eventCard = document.createElement('div');
