@@ -1,16 +1,16 @@
+//Vil ikke vise det siste bildet/indeksen i arrayen. 
 
 export default async function heroCarousel(events) {
 	const heroContainer = document.querySelector('.hero__section--cards');
-	const slicedEventArray = events.slice(1, 5);
-	const firstImage = events.slice(0, 1);
+	const slicedEventArray = events.slice(0, 6);
+	// const firstImage = events.slice(0, 1);
 	let heroImages = [];
 	let currentIndex = 0;
 
-	// console.log(slicedEventArray[6])//Vil ikke vise den første og siste indexen i arrayen. 
-	if(heroContainer) {
-		loadFirstImage(firstImage);
-		setInterval(removeFirstImage, 3000);
-	}
+	// if(heroContainer) {
+	// 	loadFirstImage(firstImage);
+	// 	toggleFirstImage(firstImage);
+	// }
 
 	if (heroContainer) {
 		slicedEventArray.forEach(image => {
@@ -20,37 +20,40 @@ export default async function heroCarousel(events) {
 		})
 	}
 
-	function loadFirstImage(firstImage) {
-		const firstImageText = firstImage[0].name;
-		const firstImageDate = firstImage[0].day.localDate;
-		const firstimageUrl = firstImage[0].imageUrl;
+	// function loadFirstImage(firstImage) {
+	// 	const firstImageText = firstImage[0].name;
+	// 	const firstImageDate = firstImage[0].day.localDate;
+	// 	const firstimageUrl = firstImage[0].imageUrl;
 
-		const firstImageCardContainer = document.createElement('div');
-		const firstImagePhotoElement = document.createElement('img');
-		const firstImageBottom = document.createElement('div');	
-		const firstImageTitle = document.createElement('div');
-		const firstImageDateNumber = document.createElement('div');
+	// 	const firstImageCardContainer = document.createElement('div');
+	// 	const firstImagePhotoElement = document.createElement('img');
+	// 	const firstImageBottom = document.createElement('div');	
+	// 	const firstImageTitle = document.createElement('div');
+	// 	const firstImageDateNumber = document.createElement('div');
 
-		firstImageCardContainer.classList.add('.hero__image--visible');
-		firstImagePhotoElement.classList.add('hero__image--visual');
-		firstImageBottom.classList.add('hero__image--text');
-		firstImageTitle.classList.add('hero__image--text');
-		firstImageDateNumber.classList.add('hero__image--date');
+	// 	firstImageCardContainer.classList.add('hero__first--visible');
+	// 	firstImagePhotoElement.classList.add('hero__image--visual');
+	// 	firstImageBottom.classList.add('hero__image--text');
+	// 	firstImageTitle.classList.add('hero__image--text');
+	// 	firstImageDateNumber.classList.add('hero__image--date');
 
-		heroContainer.appendChild(firstImageCardContainer);
-		firstImageCardContainer.appendChild(firstImagePhotoElement);
-		firstImageCardContainer.appendChild(firstImageBottom);
-		firstImageBottom.appendChild(firstImageTitle);
-		firstImageBottom.appendChild(firstImageDateNumber);
+	// 	heroContainer.appendChild(firstImageCardContainer);
+	// 	firstImageCardContainer.appendChild(firstImagePhotoElement);
+	// 	firstImageCardContainer.appendChild(firstImageBottom);
+	// 	firstImageBottom.appendChild(firstImageTitle);
+	// 	firstImageBottom.appendChild(firstImageDateNumber);
 
-		firstImagePhotoElement.setAttribute('src',firstimageUrl.find(heroImage => heroImage.width > 600)?.url);
-		firstImageTitle.innerText = firstImageText;
-		firstImageDateNumber.innerText = firstImageDate;
-	}
+	// 	firstImagePhotoElement.setAttribute('src',firstimageUrl.find(heroImage => heroImage.width > 600)?.url);
+	// 	firstImageTitle.innerText = firstImageText;
+	// 	firstImageDateNumber.innerText = firstImageDate;
 
-	function removeFirstImage() {
-		firstImageCardContainer.innerText = '';
-	}
+	// 	setInterval(removeClass, 3000);
+	// 	function removeClass() {
+	// 		firstImageCardContainer.classList.remove('hero__first--visible');
+
+	// 		firstImageCardContainer.classList.add('hero__first--hidden');
+	// 	}
+	// }
 
 	function autoplayCarousel(image) {
 		renderCarousel(image);
@@ -102,5 +105,13 @@ export default async function heroCarousel(events) {
 		heroImage.setAttribute('src', eventImage.find(heroImage => heroImage.width > 600)?.url);
 		imageCardTitle.innerText = eventName;
 		imageCardDate.innerText = eventDate;
+
+		// setInterval(removeClass, 3000);
+		// function removeClass() {
+		// 	if (heroImages[0])
+		// 	heroImages[0].classList.remove('hero__first--visible');
+
+		// 	heroImages[0].classList.add('hero__first--hidden');
+		// }
 	}
 }

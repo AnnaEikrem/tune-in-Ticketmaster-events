@@ -12,6 +12,18 @@
 	background-color: grey;
 }
 
+/* First hero image */
+.hero__first--visible {
+	display: block;
+	width: 100%;
+}
+
+.hero__first--hidden {
+	display: none;
+}
+
+
+/* Styling rest of hero cards */
 .hero__image--card {
 	display: none;
 	width: 100%;
