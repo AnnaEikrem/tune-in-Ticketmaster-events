@@ -6,7 +6,6 @@ import heroCarousel from './modules/heroCarousel.js';
 // Fetch data from Ticketmaster;
 const fetchedData = await fetchEvents();
 
-
 toggleNavigation();
 renderEventsList(fetchedData);
 heroCarousel(fetchedData);
