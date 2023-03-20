@@ -8,11 +8,23 @@ export default function filterButtons(genres) {
 		})
 	}
 
-	function renderButtonHTML(genre) {
-		const genreName = genre.genre;
-		const genreID = genre.genreID
-		// console.log(genreName)
-		console.log(genreID)
-	}
+		function renderButtonHTML(genre) {
+			const genreName = genre.genre;
+			const genreID = genre.genreID;
+			const genreButton = document.createElement('button');
+
+			genreButton.innerText = genreName;
+			genreButton.classList.add('genre__button')
+			genreButton.dataset.id = genreID;
+			genreButton.addEventListener('click', () => {
+				getEventsByGenre(genreID);
+			});
+
+			buttonsContainer.appendChild(genreButton);
+		}
+
+		function getEventsByGenre(genreID) {
+			console.log(allData)
+		}
 
 }
