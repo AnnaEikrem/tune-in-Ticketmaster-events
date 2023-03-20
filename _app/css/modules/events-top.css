@@ -18,3 +18,21 @@
 .events__select--categories {
 	padding: 0.5rem;
 }
+
+/* Buttons section-styling */
+.genre__buttons--container {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	background: yellow;
+}
+
+.genre__button {
+	margin: 0.2rem;
+	border: 1px solid #000;
+}
+
+.genre__button:hover {
+	background: grey;
+	cursor: pointer;
+	transition: 0.2s;
+}
