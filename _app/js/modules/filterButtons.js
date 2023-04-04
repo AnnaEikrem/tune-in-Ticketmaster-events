@@ -1,30 +1,44 @@
-export default function filterButtons(genres) {
-	const allData = genres;
+export default function filterButtons(genreData) {
 	const buttonsContainer = document.querySelector('.genre__buttons--container');
+	const eventGenres = genreData.map(event => event.genre)
+
+	const uniqueGenres = [...new Set(eventGenres)]
 
 	if(buttonsContainer) {
-		allData.forEach(genre => {
-			renderButtonHTML(genre);
-		})
+		for (let i = 0; i < uniqueGenres.length; i++)
+			renderButtonHTML();
 	}
 
-		function renderButtonHTML(genre) {
-			const genreName = genre.genre;
-			const genreID = genre.genreID;
-			const genreButton = document.createElement('button');
+	// console.log(genreData.genre)
+	function renderButtonHTML() {
+		const genreText = uniqueGenres;
+		const buttonElement = document.createElement('button');
 
-			genreButton.innerText = genreName;
-			genreButton.classList.add('genre__button')
-			genreButton.dataset.id = genreID;
-			genreButton.addEventListener('click', () => {
-				getEventsByGenre(genreID);
-			});
+		buttonElement.classList.add('genre__button');
 
-			buttonsContainer.appendChild(genreButton);
-		}
+		buttonElement.textContent = genreText
 
-		function getEventsByGenre(genreID) {
-			console.log(allData)
-		}
+		buttonsContainer.appendChild(buttonElement);
+		console.log(uniqueGenres)
+	}
+
+		// function renderButtonHTML(genre) {
+		// 	const genreName = genre.genre;
+		// 	const genreID = genre.genreID;
+		// 	const genreButton = document.createElement('button');
+
+		// 	genreButton.innerText = genreName;
+		// 	genreButton.classList.add('genre__button')
+		// 	genreButton.dataset.id = genreID;
+		// 	genreButton.addEventListener('click', () => {
+		// 		getEventsByGenre(genreID);
+		// 	});
+
+		// 	buttonsContainer.appendChild(genreButton);
+		// }
+
+		// function getEventsByGenre() {
+		// 	this.target.genreID
+		// }
 
 }
