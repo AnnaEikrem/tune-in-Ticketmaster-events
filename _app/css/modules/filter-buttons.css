@@ -1,3 +1,8 @@
 .genre__button {
 	
 }
+
+.filtered__event--active {
+	text-decoration: underline;
+	font-weight: bold;
+}
