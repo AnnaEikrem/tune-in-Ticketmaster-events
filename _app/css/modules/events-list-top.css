@@ -1,0 +1,23 @@
+.overview__events--container {
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.events__select--container {
+	width: 90vw;
+}
+
+.overview__events--headline {
+	margin: var(--margin-medium);
+	font-size: var(--font-size-large);
+}
+
+.events__select--categories {
+	padding: 0.5rem;
+}
+
+
+
+

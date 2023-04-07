@@ -5,22 +5,18 @@
 	font-size: var(--font-size-large);
 }
 
-/* Styling navigation/menu */
 .header__top--container {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-
 	padding: 1.5rem;
 	background: var(--color-02);
 }
-
 
 .header__navigation--close {
 	display: none;
 }
 
-/* Riktig å sette høyden til navigasjonen med 'vh'? */
 .header__menu--container {
 	height: 100vh;
 	display: none;
@@ -28,7 +24,7 @@
 }
 
 .header__menu--item {
-	padding: 0.3rem;
+	line-height: normal;
 	border: 1px solid var(--color-04);
 }
 
@@ -45,13 +41,12 @@
 	border-left: 1px solid var(--color-04);
 }
 
-/* Styling bottom navigation */
 .header__navigation--bottom {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	padding: 2rem;
+	padding-top: 1.5rem;
 }
 
 .header__navigation--input {
@@ -81,5 +76,67 @@
 }
 
 .header__navigation--heart--icon {
-	width: 5rem;
+	width: 3.5rem;
+}
+
+/* Styling tablet */
+@media screen and (min-width: 615px) {
+	.header__container {
+		display: flex;
+		flex-direction: column;
+		/* height: 10rem; */
+	}
+
+	.header__menu--container {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		width: 100vw;
+	}
+
+	.header__menu--list {
+		display: flex;
+	}
+
+	.header__menu--item {
+		display: flex;
+		justify-content: center;
+		padding: 1rem;
+		width: 35%;
+	}
+
+	/* Hovrer ikke med en gang */
+	.header__menu--item:hover {
+		background: pink;
+		transition: 0.4s;
+	}
+
+	.header__navigation--input {
+		width: 50%;
+	}
+
+	.header__navigation--open {
+		display: none;
+	}
+
+	.header__navigation--close {
+		display: none;
+	}
+
+	.header__navigation--heart {
+		display: none;
+	}
+
+	.header__menu--item--arrow {
+		display: none;
+	}
+	
+}
+
+/* Styling desktop */
+@media screen and (min-width: 768px) {
+	
+
+
+
 }
