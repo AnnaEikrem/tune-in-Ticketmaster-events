@@ -5,7 +5,8 @@
 @import '/_app/css/modules/header.css';
 @import '/_app/css/modules/hero.css';
 @import '/_app/css/modules/filter-buttons.css';
-@import '/_app/css/modules/main-events.css';
-@import '/_app/css/modules/events-top.css';
+@import '/_app/css/modules/event-main.css';
+@import '/_app/css/modules/events-list-top.css';
 @import '/_app/css/modules/events-list.css';
+@import '/_app/css/modules/filter-buttons.css'
 
