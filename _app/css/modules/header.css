@@ -107,7 +107,7 @@
 
 	/* Hovrer ikke med en gang */
 	.header__menu--item:hover {
-		background: pink;
+		background: var(--hover-color);
 		transition: 0.4s;
 	}
 

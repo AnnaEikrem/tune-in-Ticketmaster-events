@@ -22,7 +22,7 @@
 	}
 
 	.genre__button:hover {
-		background: pink;
+		background: var(--hover-color);
 		transition: 0.2s;
 	}
 
@@ -36,6 +36,5 @@
 	.genre__buttons--container {
 		display: grid;
 		grid-template-columns: repeat(6, 1fr);
-		/* padding: 0.5rem ; */
 	}
 }
