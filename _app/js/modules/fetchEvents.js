@@ -6,15 +6,20 @@ export default async function fetchEvents() {
 	const city = 'Oslo'
 	const endpointEventsOslo = `https://app.ticketmaster.com/discovery/v2/events?apikey=${i}&locale=*&size=${eventSize}&city=${city}&countryCode=NO&segmentName=Music`;
 
-	// let response = '';
+	
+// Try/catch funker ikke, viser ikke 'else if' error meldinger.
 
-	// if (!response) {
-	// 	loading();
-	// }
+// let response = '';
+// if (!response) {
+// 	loading();
+// }
+
+// function loading() {
+// 	console.log('Loading, please wait a sec');
+// }
 
 	const response = await fetch(endpointEventsOslo);
-
-	// Try/catch funker ikke, viser ikke 'else if' error meldinger. 
+	
 	try {
 		return await handleResponse(response);
 	} catch (error) {
@@ -37,8 +42,9 @@ async function handleResponse(response) {
 				imageUrl: data.images,
 				buyLink: data.url,
 				timeStamp: data.dates.start.dateTime,
-				subGenre: data.classifications[0].subGenre.name,
-				id: data.classifications[0].subGenre.id
+				segment: data.classifications[0].segment.name,
+				genre: data.classifications[0].genre.name,
+				genreID: data.classifications[0].genre.id
 			}
 		});
 
@@ -54,11 +60,6 @@ async function handleResponse(response) {
 		throw new Error('Something went wrong');
 	}
 };
-
-
-// function loading() {
-// 	console.log('Loading, please wait a sec');
-// }
 
 function handleError() {
 	console.log('Something went wrong');

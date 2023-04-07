@@ -1,11 +1,12 @@
-@import './reset.css';
-@import './base.css';
-@import './variables.css';
+@import '/_app/css/reset.css';
+@import '/_app/css/base.css';
+@import '/_app/css/variables.css';
 
-@import './modules/header.css';
-@import './modules/hero.css';
-@import './modules/main-events.css';
+@import '/_app/css/modules/header.css';
+@import '/_app/css/modules/hero.css';
+@import '/_app/css/modules/filter-buttons.css';
+@import '/_app/css/modules/event-main.css';
+@import '/_app/css/modules/events-list-top.css';
+@import '/_app/css/modules/events-list.css';
+@import '/_app/css/modules/filter-buttons.css'
 
-
-@import './modules/events-top.css';
-@import './modules/events-list.css';

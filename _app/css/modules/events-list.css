@@ -6,20 +6,16 @@
 	margin: 1rem 1.5rem;
 }
 
-
 /* Styling one event-card */
 .event__item--card {
 	display: flex;
 	align-items: center;
 	flex-direction: column;
 	margin-bottom: 2rem;
-	/* height: 20rfetem; */
 }
 
 .event__item--picture {
 	width: 100%;
-	/* object-fit: fill; */
-	/* height: 12rem; */
 }
 
 .event__item--information {
@@ -92,14 +88,21 @@
 }
 
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 615px) {
 	.events__list--cards {
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		
+		grid-template-columns: repeat(2, 1fr);
 	}
 
 	.event__item--card {
 		margin: 0.8rem;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.events__list--cards {
+		width: 100vw;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
 	}
 }

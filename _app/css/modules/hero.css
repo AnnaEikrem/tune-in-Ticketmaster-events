@@ -43,7 +43,6 @@
 }
 
 .hero__image--visual {
-	/* position: relative; */
 	width: 100%;
 	opacity: 70%;
 }
@@ -51,16 +50,10 @@
 .hero__image--text {
 	display: flex;
 	flex-direction: row;
+	align-items: center;
 	width: 100%;
 	padding: 1rem;
 	font-family: var(--font-family-body);
-	/* position: absolute; 
-	background: grey;
-	width: 70%;
-	padding: 4rem;
-	opacity: 70%;
-	left: 6.55rem;
-	top: 45%; */
 }
 
 .hero__image--title, .hero__image--date {

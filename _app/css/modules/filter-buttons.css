@@ -1,0 +1,40 @@
+/* Buttons section-styling */
+.genre__buttons--container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	width: 100%;
+}
+
+.genre__button {
+	margin: 0.3rem;
+	border: 1px solid #000;
+	border-radius: 0.5rem;
+}
+
+@media screen and (min-width: 615px) {
+	.genre__buttons--container {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+	}
+	
+	.genre__button {
+		margin: 0.5rem
+	}
+
+	.genre__button:hover {
+		background: var(--hover-color);
+		transition: 0.2s;
+	}
+
+	.filtered__event--active {
+		text-decoration: underline;
+		font-weight: bold;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.genre__buttons--container {
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+	}
+}
