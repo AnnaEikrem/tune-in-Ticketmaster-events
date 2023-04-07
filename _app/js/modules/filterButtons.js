@@ -26,7 +26,6 @@ export default function filterButtons(genreData) {
 			filteredEvents = [];
 			renderEventsList(genreData);
 		 } else {
-			// filteredEvents = [];
 			filterEvents(currentEvent);
 		 }
 	}
@@ -40,16 +39,6 @@ export default function filterButtons(genreData) {
 	}
 
 	function filterEvents(currentFilterButton) {
-		// if (filteredEvents.length > 0 && filteredEvents[0].genre === currentFilterButton) {
-		// 	// Reset to show all events
-		// 	filteredEvents = [];
-		// 	renderEventsList(genreData.sort((a, b) => new Date(a.date) - new Date(b.date)));
-		//  } else {
-		// 	// Filter events by genre
-		// 	filteredEvents = genreData.filter(event => event.genre === currentFilterButton);
-		// 	renderEventsList(filteredEvents.sort((a, b) => new Date(a.date) - new Date(b.date)));
-		//  }
-
 		switch (currentFilterButton) {
 			case 'Alternative':
 				filteredEvents = genreData.filter(event => event.genre === 'Alternative');
@@ -113,7 +102,11 @@ export default function filterButtons(genreData) {
 			renderEventsList(filteredEvents);
 	}
 
-	function renderButtonHTML() {
+		function renderButtonHTML() {
+		// const selectElement = document.createElement('select');
+		// selectElement.classList.add('genre__select');
+		// buttonsContainer.appendChild(selectElement);
+
 		uniqueGenres.forEach(genre => {
 			const buttonElement = document.createElement('button');
 			buttonElement.classList.add('genre__button');
@@ -123,4 +116,30 @@ export default function filterButtons(genreData) {
 			buttonElement.addEventListener('click', handleFilterButtonClick);
 		})
 	}
+
 }
+
+
+
+
+
+
+
+	// function renderButtonHTML() {
+	// 	const selectElement = document.createElement('select');
+	// 	selectElement.classList.add('genre__select');
+	// 	buttonsContainer.appendChild(selectElement);
+	
+	// 	uniqueGenres.forEach(genre => {
+	// 		const optionElement = document.createElement('option');
+	// 		optionElement.textContent = genre;
+	// 		selectElement.appendChild(optionElement);
+	// 	});
+	
+	// 	selectElement.addEventListener('change', handleFilterSelectChange);
+	// }
+	
+	// function handleFilterSelectChange(event) {
+	// 	const currentEvent = event.target.value;
+	// 	filterEvents(currentEvent);
+	// }
