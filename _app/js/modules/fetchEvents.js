@@ -2,7 +2,7 @@ import { tm_token } from '../env.js';
 
 export default async function fetchEvents() {
 	const i = tm_token;
-	const eventSize = 200;
+	const eventSize = 100;
 	const city = 'Oslo'
 	const endpointEventsOslo = `https://app.ticketmaster.com/discovery/v2/events?apikey=${i}&locale=*&size=${eventSize}&city=${city}&countryCode=NO&segmentName=Music`;
 
