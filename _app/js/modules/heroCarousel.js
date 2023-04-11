@@ -1,4 +1,6 @@
-//Vil ikke vise det siste bildet/indeksen i arrayen. 
+/**
+ * @todo Figure out why the image array doesn't want to display all indexed. 
+ */
 
 export default async function heroCarousel(events) {
 	const heroContainer = document.querySelector('.hero__section--cards');
@@ -11,10 +13,8 @@ export default async function heroCarousel(events) {
 	if (heroContainer) {
 		loadFirstImage();
 		slicedEventArray.forEach(image => {
-			// autoplayCarousel();
 			setInterval(autoplayCarousel, 3000);
 			renderCarouselHTML(image);
-			// formatNewDate(image);
 	})
 	}
 

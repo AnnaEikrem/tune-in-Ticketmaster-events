@@ -7,17 +7,8 @@ export default async function fetchEvents() {
 	const endpointEventsOslo = `https://app.ticketmaster.com/discovery/v2/events?apikey=${i}&locale=*&size=${eventSize}&city=${city}&countryCode=NO&segmentName=Music`;
 
 	
-// Try/catch funker ikke, viser ikke 'else if' error meldinger.
-
-// let response = '';
-// if (!response) {
-// 	loading();
-// }
-
-// function loading() {
-// 	console.log('Loading, please wait a sec');
-// }
-
+/*Try/catch funker ikke, viser ikke 'else if' error meldinger. Problem med selve Ticketmaster API. */
+	
 	const response = await fetch(endpointEventsOslo);
 	
 	try {

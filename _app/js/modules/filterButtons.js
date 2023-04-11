@@ -1,5 +1,11 @@
 import renderEventsList from './renderEventsList.js';
 
+/**
+ * @todo Make filterButtons as a select html, with the genres as options in mobile version. 
+ * @todo When genre button is re-clicked, add the rest of the events at the top of the events container. 
+ */
+
+
 export default function filterButtons(genreData) {
 	let filteredEvents = [];
 	const buttonsContainer = document.querySelector('.genre__buttons--container');
@@ -118,28 +124,3 @@ export default function filterButtons(genreData) {
 	}
 
 }
-
-
-
-
-
-
-
-	// function renderButtonHTML() {
-	// 	const selectElement = document.createElement('select');
-	// 	selectElement.classList.add('genre__select');
-	// 	buttonsContainer.appendChild(selectElement);
-	
-	// 	uniqueGenres.forEach(genre => {
-	// 		const optionElement = document.createElement('option');
-	// 		optionElement.textContent = genre;
-	// 		selectElement.appendChild(optionElement);
-	// 	});
-	
-	// 	selectElement.addEventListener('change', handleFilterSelectChange);
-	// }
-	
-	// function handleFilterSelectChange(event) {
-	// 	const currentEvent = event.target.value;
-	// 	filterEvents(currentEvent);
-	// }

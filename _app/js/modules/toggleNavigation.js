@@ -2,7 +2,6 @@ export default function toggleNavigation() {
 	let navigationVisible = false;
 
 	const navigationMenu = document.querySelector('.header__menu--container');
-	// const menuItems = document.querySelectorAll('.header__menu--item');
 	const burgerMenuIcon = document.querySelector('.header__navigation--open');
 	const closeMenuIcon = document.querySelector('.header__navigation--close');
 
