@@ -1,5 +1,17 @@
 Tune in Oslo!
 
-Events app made with Ticketmaster API to find and filter events happening in Oslo.
+This is a web application that displays the all the 'Music events' in Oslo. 
 
-Made with HTML, CSS and JS. 
+Technologies used to develop app:
+	- HTML
+	- CSS
+	- Javascript
+	- Ticketmaster API
+
+Features:
+	- Toggle navigation.
+	- A hero carousel that plays automatically.
+	- An events calender, a rendered list of music events in Oslo.
+	- 'Buy' button, with link to purchase tickets.
+	- Genre filter buttons. 
+
