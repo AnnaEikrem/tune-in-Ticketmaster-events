@@ -2,15 +2,13 @@ import { tm_token } from '../env.js';
 
 export default async function fetchEvents() {
 	const i = tm_token;
-	const eventSize = 100;
+	const eventSize = 20;
 	const city = 'Oslo'
-	const endpointEventsOslo = `https://app.ticketmaster.com/discovery/v2/events?apikey=${i}&locale=*&size=${eventSize}&city=${city}&countryCode=NO&segmentName=Music`;
 
-	
-/*Try/catch funker ikke, viser ikke 'else if' error meldinger. Problem med selve Ticketmaster API. */
-	
+	const endpointEventsOslo = `https://app.ticketmaster.com/discovery/v2/events?apikey=${i}&locale=*&size=${eventSize}&city=${city}&countryCode=NO&segmentName=music`;
+
 	const response = await fetch(endpointEventsOslo);
-	
+	console.log(response)
 	try {
 		return await handleResponse(response);
 	} catch (error) {
